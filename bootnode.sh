@@ -4,7 +4,7 @@
 #
 docker stop ethereum-bootnode
 docker rm ethereum-bootnode
-IMGNAME="ethereum/client-go:alltools-v1.8.12"
+IMGNAME="ethereum/client-go:alltools-stable"
 DATA_ROOT=${DATA_ROOT:-$(pwd)}
 # generate bootnode key if needed
 mkdir -p $DATA_ROOT/.bootnode
@@ -23,5 +23,3 @@ docker run -d --name ethereum-bootnode \
     --network ethereum \
     $IMGNAME bootnode --nodekey /opt/bootnode/boot.key --verbosity=3 "$@"
 # --addr "$BOOTNODE_SERVICE:30301" "$@"
-
-
