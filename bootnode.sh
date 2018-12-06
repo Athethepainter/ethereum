@@ -21,5 +21,5 @@ fi
 docker run -d --name ethereum-bootnode \
     -v $DATA_ROOT/.bootnode:/opt/bootnode \
     --network ethereum \
-    $IMGNAME bootnode --nodekey /opt/bootnode/boot.key --verbosity=3 "$@"
+    $IMGNAME bootnode --nodekey /opt/bootnode/boot.key --verbosity=3 -v5 "$@"
 # --addr "$BOOTNODE_SERVICE:30301" "$@"
