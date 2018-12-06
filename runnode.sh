@@ -17,7 +17,7 @@ if [[ ! -z $RPC_PORT ]]; then
     RPC_PORTMAP="-p $RPC_PORT:8545"
 fi
 BOOTNODE_URL=${BOOTNODE_URL:-$(./getbootnodeurl.sh)}
-echo BOOTNODE_URL
+echo $BOOTNODE_URL
 if [ ! -f $(pwd)/genesis.json ]; then
     echo "No genesis.json file found, please run 'genesis.sh'. Aborting."
     exit
